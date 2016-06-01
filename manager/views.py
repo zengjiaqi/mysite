@@ -27,6 +27,9 @@ def show_module_tree(request):
 	modules = TestModule.objects
 	moduleslist = modules.filter(path__regex=r'^[0-9]+/$')
 	return render(request,'manager/manager.html',{'moduleslist':moduleslist})
+
+def login(request):
+	return render(request,'manager/login.html',{})
 	
 
 
