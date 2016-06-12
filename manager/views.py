@@ -4,7 +4,7 @@ from manager.models import TestModule
 
 # Create your views here.
 def index(request):
-	return HttpResponse("haha")
+	return render(request,'manager/index.html',{})
 
 def add_module(request,module_name,parent_id,desc):
 
