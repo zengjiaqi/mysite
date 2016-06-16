@@ -11,7 +11,7 @@ $('#login-button').click(function()
             type: "POST",
             dataType:'json',
             async: false,
-            url: "haha",
+            url: "loginapi",
             data: {
                 "user":user,
                 "password":password,
@@ -20,14 +20,14 @@ $('#login-button').click(function()
                 if (data["result"]===1)
                 {
                     window.location.href="http://127.0.0.1:8000/manager/index/";
+                    // alert(data['result'])
                 }
                 else
                 {
-                    alert("用户不存在或密码错误！");
+                    alert(data['msg']);
                 }
 
             }
         });
-    }
-    // window.location.href="http://127.0.0.1:8000/manager/index/"; 
+    } 
 });
